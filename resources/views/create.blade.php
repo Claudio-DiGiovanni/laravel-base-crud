@@ -1,27 +1,31 @@
 @extends('layouts.base')
 
 @section('content')
-    <form method="post" action="{{ route('comic.store') }}">
+    <form method="post" action="{{ route('comics.store') }}">
         @csrf()
         <div class="mb-3">
-            <label for="city" class="form-label">Titolo</label>
-            <input type="text" class="form-control" id="city" name="title">
+            <label for="title" class="form-label">Titolo</label>
+            <input type="text" class="form-control" id="title" name="title">
         </div>
         <div class="mb-3">
-            <label for="price" class="form-label">Descrizione</label>
-            <input type="number" class="form-control" id="price" name="description">
+            <label for="description" class="form-label">Descrizione</label>
+            <input type="text" class="form-control" id="description" name="description">
         </div>
         <div class="mb-3">
-            <label for="street" class="form-label">thumb</label>
-            <input type="text" class="form-control" id="street" name="thumb">
+            <label for="thumb" class="form-label">thumb</label>
+            <input type="text" class="form-control" id="thumb" name="thumb">
         </div>
         <div class="mb-3">
-            <label for="free_from" class="form-label">Disponibile da</label>
-            <input type="date" class="form-control" id="free_from" name="sale_date">
+            <label for="price" class="form-label">Prezzo</label>
+            <input type="number" class="form-control" id="price" name="price">
         </div>
         <div class="mb-3">
-            <label for="rooms" class="form-label">Tipo</label>
-            <input type="number" class="form-control" id="rooms" name="type">
+            <label for="date" class="form-label">Disponibile da</label>
+            <input type="date" class="form-control" id="date" name="sale_date">
+        </div>
+        <div class="mb-3">
+            <label for="type" class="form-label">Tipo</label>
+            <input type="text" class="form-control" id="type" name="type">
         </div>
         <button type="submit" class="btn btn-primary">Salva</button>
     </form>

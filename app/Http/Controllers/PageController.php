@@ -39,12 +39,12 @@ class PageController extends Controller
         $data = $request->all();
 
         $comic = new Comic();
-            $comic->title = $item['title'];
-            $comic->description = $item['description'];
-            $comic->thumb = $item['thumb'];
-            $comic->price = $item['price'];
-            $comic->sale_date = $item['sale_date'];
-            $comic->type = $item['type'];
+            $comic->title = $data['title'];
+            $comic->description = $data['description'];
+            $comic->thumb = $data['thumb'];
+            $comic->price = $data['price'];
+            $comic->sale_date = $data['sale_date'];
+            $comic->type = $data['type'];
             $comic->save();
 
         return redirect()->route('home');

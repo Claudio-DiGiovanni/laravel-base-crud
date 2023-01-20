@@ -1,6 +1,7 @@
 @extends('layouts.base')
 
 @section('content')
+<a href="{{ route('comics.create') }}" class="btn btn-primary">CREA NUOVO</a>
 <div class="container">
     @foreach ($comics as $comic)
         <h3>{{ $comic->title }}</h3>
