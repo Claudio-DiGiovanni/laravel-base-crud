@@ -15,5 +15,11 @@
         <li>Tipo: {{ $comic->type }}</li>
         <li><img src="{{ $comic->thumb }}" alt="cover-page"></li>
     </ul>
-    <a href="/" class="btn btn-primary">HOME</a>
+    <a href="/" class="btn btn-primary">HOME</a> <br>
+    <a href="{{ route('comics.edit', ['comic' => $comic]) }}" class="btn btn-warning">Edita</a>
+    <form action="{{ route('comics.destroy', ['comic' => $comic]) }}" method="post">
+        @method('DELETE')
+        @csrf
+        <button class="btn btn-danger">Elimina</button>
+    </form>
 @endsection
